@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Neural Network Study #2 - 2015.10.31"
+title:  "Long Short Term Memory Network ( LSTM )"
 date:   2015-10-31 22:00:00
 categories: Neural Network
 ---

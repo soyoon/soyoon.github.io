@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Neural Network Study #1 - 2015.10.27 "
+title:  "Languege Model, Recurrent Neural Network"
 date:   2015-10-27 22:00:00
 categories: Neural Network
 ---
