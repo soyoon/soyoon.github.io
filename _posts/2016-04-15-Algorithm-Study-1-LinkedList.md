@@ -1,6 +1,7 @@
-#Data Structure & Algorighm Study -1
+# Data Structure & Algorighm Study -1
 
 ### 연결리스트 ( Linked Lists )
+
 	- 연속된 항목들이 포인터로 연결된다.
 	- 마지막 항목은 Null 을 포인트한다.
 	- 프로그램이 수행되는 동안 크기가 커지거나 작아질 수 있다.
@@ -8,6 +9,7 @@
 	- 메모리 공간을 낭비하지 않는다(하지만 포인터를 위한 추가의 메모리를 필요로 한다).
 	- 개별 항목에 접근하는 접근 시간이 길다. O(n)
 ### 단일 연결 리스트 ( Single Linked List )
+
 	public class ListNode {
     	private int data;
         private ListNode next;

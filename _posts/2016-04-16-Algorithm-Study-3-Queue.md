@@ -1,7 +1,10 @@
-#Data Structure & Algorighm Study -3
-##Queue
+# Data Structure & Algorighm Study -3
+
+## Queue
+
 First In First Out
-####Queue의 적용 사례
+#### Queue의 적용 사례
+
 1. 직접적인 적용
 	- (우선순위가 같은) 시스템 예약 작업 도착 순서대로 처리하기
 	- 매표소 줄
@@ -11,9 +14,13 @@ First In First Out
 	- 알고리즘을 위한 보조적 데이터 구조
 	- 다른 데이터 구조의 구성 요소
 
-###Queue의 구현
+### Queue의 구현
+
 enqueue, dequeue를 하면 일반 배열은 공간이 낭비돼, 원형 배열로 해야됨
-###간단한 원형 배열 구현
+
+### 간단한 원형 배열 구현
+{% highlight java linenos %}
+
 	public class ArrayQueue {
     	private int front;
         private int rear;
@@ -63,6 +70,8 @@ enqueue, dequeue를 하면 일반 배열은 공간이 낭비돼, 원형 배열�
             return data;
         }
     }
+
+{% endhighlight %}
 
 문제-1. 큐인 Q의 항목들의 순서를 뒤집는 알고리즘을 제시하라. 큐에 엑세스 할 때 큐 ADT의 함수들만을 이용해야 한다.
 

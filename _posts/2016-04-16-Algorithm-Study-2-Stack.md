@@ -1,6 +1,9 @@
-#Data Structure & Algorighm Study -2
-##Stack
-###Array로 구현한 Stack
+# Data Structure & Algorighm Study -2
+
+## Stack
+
+### Array로 구현한 Stack
+
 	public class ArrayStack {
     	private int top;
         private int capacity;
@@ -33,7 +36,8 @@
         	top = -1;
         }
     }
-###LinkedList로 구현한 Stack
+
+### LinkedList로 구현한 Stack
 
 	public class LLStack extends Stack {
 		private LLNode headNode;
