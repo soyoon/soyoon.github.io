@@ -1,5 +1,5 @@
-#Data Structure & Algorighm Study -3#
-##Queue##
+#Data Structure & Algorighm Study -3
+##Queue
 First In First Out
 ####Queue의 적용 사례
 1. 직접적인 적용
@@ -11,7 +11,7 @@ First In First Out
 	- 알고리즘을 위한 보조적 데이터 구조
 	- 다른 데이터 구조의 구성 요소
 
-###Queue의 구현###
+###Queue의 구현
 enqueue, dequeue를 하면 일반 배열은 공간이 낭비돼, 원형 배열로 해야됨
 ###간단한 원형 배열 구현
 	public class ArrayQueue {
