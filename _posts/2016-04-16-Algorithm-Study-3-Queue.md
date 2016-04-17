@@ -3,6 +3,7 @@
 ## Queue
 
 First In First Out
+
 #### Queue의 적용 사례
 
 1. 직접적인 적용
@@ -19,6 +20,7 @@ First In First Out
 enqueue, dequeue를 하면 일반 배열은 공간이 낭비돼, 원형 배열로 해야됨
 
 ### 간단한 원형 배열 구현
+
 {% highlight java linenos %}
 
 	public class ArrayQueue {
@@ -75,6 +77,8 @@ enqueue, dequeue를 하면 일반 배열은 공간이 낭비돼, 원형 배열�
 
 문제-1. 큐인 Q의 항목들의 순서를 뒤집는 알고리즘을 제시하라. 큐에 엑세스 할 때 큐 ADT의 함수들만을 이용해야 한다.
 
+{% highlight java linenos %}
+
 	public class QueueReversal {
     	public static Queue reverseQueue(Queue queue) {
         	Stack stack = new LLStack();
@@ -88,11 +92,15 @@ enqueue, dequeue를 하면 일반 배열은 공간이 낭비돼, 원형 배열�
         }
     }
 
+{% endhighlight %}
+
 문제-2 두 개의 스택으로 큐를 구현하려면 어떻게 하는가?
+
+{% highlight java linenos %}
 
 	public class QueueWithTwoStacks {
     	Stack stack1;
-        Stack stack3;
+        Stack stack2;
         public QueueWithTwoStack() {
         	stack1 = new LLStack();
             stack2 = new LLStack();
@@ -120,7 +128,11 @@ enqueue, dequeue를 하면 일반 배열은 공간이 낭비돼, 원형 배열�
 		}
     }
 
+{% endhighlight %}
+
 문제-3 두 개의 큐를 사용해서 효율적으로 스택을 구현하라.
+
+{% highlight java linenos %}
 
 	public class StackWithTwoQueue {
     	LLQueue queue1;
@@ -143,3 +155,7 @@ enqueue, dequeue를 하면 일반 배열은 공간이 낭비돼, 원형 배열�
 			//TODO..
 		}
     }
+
+{% endhighlight %}
+
+출처 : 다양한 예제로 학습하는 데이터 구조와 알고리즘 for Java
