@@ -14,3 +14,4 @@ This can also fix a login loop issue on 16.04 or a black screen with cursor prob
 after solve this problem, install CUDA 8.0, cuDnn v5 ( to support GTX1080 )
 
 
+http://textminingonline.com/dive-into-tensorflow-part-iii-gtx-1080-ubuntu16-04-cuda8-0-cudnn5-0-tensorflow
