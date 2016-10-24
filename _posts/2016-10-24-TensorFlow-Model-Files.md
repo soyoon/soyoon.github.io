@@ -68,12 +68,12 @@ name은 노드간의 연결을 정의하고, 그래프가 실행될 때 inputs �
 
 #### op
 op는 어떤 연산을 실행할 것인지를 정의한다. 예를들면 "Add", "MatMul", "Conv2D" 등..
-그래프가 실행될 때, op 이름을 registry에서 검색하여 구현을 찾아낸다. registry는 [tensorflow/core/ops/nn_ops.cc]{https://github.com/tensorflow/tensorflow/blob/master/tensorflow/core/ops/nn_ops.cc} 처럼 REGISTER_OP() 매크로에 호출하여 populated 된다. 
+그래프가 실행될 때, op 이름을 registry에서 검색하여 구현을 찾아낸다. registry는 [tensorflow/core/ops/nn_ops.cc](https://github.com/tensorflow/tensorflow/blob/master/tensorflow/core/ops/nn_ops.cc) 처럼 REGISTER_OP() 매크로에 호출하여 populated 된다. 
 
 
 #### input
 다른 노드의 이름의 문자열 리스트는 콜론으로 output의 포트 숫자가 따라온다. 예를들면 두개의 인풋이 있는 노드는 ["some_node_name", "another_node_name"] 처럼 리스트로 있고, ["some_node_name:0", "another_node_name:0"] 과 같은 표현이다. 
-and defines the node's first input as the first output from the node with the name "some_node_name", and a second input from the first output of `"another_node_name"
+and defines the node's first input as the first output from the node with the name "some_node_name", and a second input from the first output of "another_node_name"
 
 
 #### device
@@ -82,7 +82,7 @@ and defines the node's first input as the first output from the node with the na
 
 #### attr
 이것은 key/value 로 노드의 모든 속성을 저장한다. 이것들은 노드들의 불변의 특징이다. convolutions의 필터 사이즈나 상수의 값 같이 런타임에서 변하지 않는 값이다.
-string, ints, array, tensor values 까지 매우 다양하고 많은 속성들이 있기 때문에, 이 구조들을 가지고 있는 별도로 분리된 protobuf file이 있다. [tensorflow/core/framework/attr_value.proto]{https://github.com/tensorflow/tensorflow/blob/master/tensorflow/core/framework/attr_value.proto}
+string, ints, array, tensor values 까지 매우 다양하고 많은 속성들이 있기 때문에, 이 구조들을 가지고 있는 별도로 분리된 protobuf file이 있다. [tensorflow/core/framework/attr_value.proto](https://github.com/tensorflow/tensorflow/blob/master/tensorflow/core/framework/attr_value.proto)
 
 각 속성은 unique name string을 가지고 속성들은 operation이 정의될 때 리스트화 되어야 한다. 만약 노드에 attribute가 존재하지 않으나 operation 정의에 default로 리스트 되어있는 게 있으면, default는 graph가 생성될 때 사용된다. 
 모든 attribute의 member는 node.name, node.op 등으로 파이썬에서 호출할 수 있다. GraphDef에 저장된  노드리스트는 모델 구조의 전체 정의이다(?)
@@ -91,14 +91,14 @@ The list of nodes stored in the GraphDef is a full definition of the model archi
 
 ### Freezing
 한가지 헷갈리는 부분은 weights은 일반적으로 학습 중에 file format 형태로 저장되지 않는다는 것이다. 대신, weights은 checkpoint files에 있다. 그리고 그래프의 Variable ops가 weights 값이 초기화된 가장 최신의 값을 로드한다. 이것은 production을 배포할때 파일을 분리하기에 매우 편리하지 않다. 
-그래서 [freeze_graph.py]{https://github.com/tensorflow/tensorflow/blob/master/tensorflow/python/tools/freeze_graph.py} 스크립트는 그래프의 정의와 checkpoints 셋을 하나의 파일로 묶는다. 
+그래서 [freeze_graph.py](https://github.com/tensorflow/tensorflow/blob/master/tensorflow/python/tools/freeze_graph.py) 스크립트는 그래프의 정의와 checkpoints 셋을 하나의 파일로 묶는다. 
 
 freeze_graph가 하는 일은, GraphDef 를 로드하고, 최신 checkpoint file 로부터 변수에 값들을 넣고, attributes에 저장된 weights의 모든 Variable op를 숫자로 된 Const로 바꾼다. 그리고 forward inference에 사용되지 않는 관련 없는 노드들을 제거한다. 그리고 결과적으로 남은..? GraphDef 를 출력 파일에 저장한다.
 
 
 ### Weight Formats
 만약 너가 신경망을 나타내는 텐서플로우 모델을 다루고 있다면, 가장 일반적인 문제중 하나는 weights의 값들을 추출하고(extracting), 표현하는(interpreting) 문제일 것이다. 일반적으로 weights을 저장하는 방법은, freeze_script로 생서한 그래프 예를들면 , Const ops처럼 wieghts을 Tensors에 넣는 것이다. 
-이 방법은 [tensorflow/core/framework/tensor.proto]{https://github.com/tensorflow/tensorflow/blob/master/tensorflow/core/framework/tensor.proto} 에 정의되어 있다. 그리고 크기와 데이터의 종류, 값에 대한 정보를 포함시킨다. 
+이 방법은 [tensorflow/core/framework/tensor.proto](https://github.com/tensorflow/tensorflow/blob/master/tensorflow/core/framework/tensor.proto) 에 정의되어 있다. 그리고 크기와 데이터의 종류, 값에 대한 정보를 포함시킨다. 
 파이썬에서는 Const op 를 나타내는 NodeDef로 부터 some_node_def.attf['value'].tensor 같은걸 호출함으로써 TensorProto 오브젝트를 얻을 수 있다. 
 
 이것은 weights 데이터를 나타내는 오브젝트를 제공한다. 데이터 자체는 오브젝트의 타입을 나타내는 suffix_val의 리스트 중 하나가 저장된다. 예를들어 float_val은 32비트 float data type 이다.
