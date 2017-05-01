@@ -2,7 +2,9 @@
 layout: post
 title:  "Data Structure & Algorighm Study -4"
 date:   2016-04-17 22:00:00
+author: Soyoon
 categories: Etc
+tags: Algorithm DS
 ---
 
 # Data Structure & Algorighm Study -4

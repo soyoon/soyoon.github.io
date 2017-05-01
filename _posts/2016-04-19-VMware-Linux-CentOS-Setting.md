@@ -1,4 +1,11 @@
-2016.04.19 VMware에 Linux - CentOS 설치
+---
+layout: post
+title:  "VMware에 Linux - CentOS 설치"
+date:   2016-04-19 22:00:00
+author: Soyoon
+categories: Etc
+tags: Algorithm DS
+---
 
 # VMware Linux - CentOS 설정
 VS Project를 Linux로 Porting 테스트 중.
@@ -28,7 +35,7 @@ fdisk 의 여러 옵션을 통해 파티션을 합치는 여러 작업을 시도
 
 ## Step4. cmake 설치 & gcc version upgrade
 - yum install cmake
-- CentOS 7 에서 제공하는 gcc version은 4.8 이다. 
+- CentOS 7 에서 제공하는 gcc version은 4.8 이다.
 -- 근데 나는 regex를 include 해서 사용하기 때문에 4.9 이상의 gcc가 필요했음.
 -- yum 에서는 최대가 4.8 이라 다른 방법을 찾아야 돼
 -- 내가 참고한 링크 :  [Fedora-Core23.repo를 만들자](http://serverfault.com/questions/720558/how-to-install-gcc-5-2-on-centos-7-1) // centOS는 없어서 fedora꺼를 대신 쓰는듯?
@@ -58,5 +65,5 @@ fdisk 의 여러 옵션을 통해 파티션을 합치는 여러 작업을 시도
 
 
 ## 마지막으로..
-- 새로 OS를 깔고 환경설정 할 필요 없이Linux에서 scp 명령어를 통해 할 수 있다고 한다.. 
+- 새로 OS를 깔고 환경설정 할 필요 없이Linux에서 scp 명령어를 통해 할 수 있다고 한다..
 - 이것도 나중에 정리해보겠음

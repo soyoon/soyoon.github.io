@@ -2,10 +2,12 @@
 layout: post
 title:  "Ubuntu 16.04, GTX1080, CUDA 8.0, Tensorflow"
 date:   2016-09-23 22:00:00
+author: Soyoon
 categories: ML
+tags: Tensorflow
 ---
 
-2016.09.23 Ubuntu 16.04, GTX1080, CUDA 8.0, Tensorflow
+# Ubuntu 16.04, GTX1080, CUDA 8.0, Tensorflow
 
 Problem : After install NVIDIA driver, Ubuntu 16.04 stuck in login loop
 Solution
