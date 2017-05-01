@@ -110,14 +110,14 @@ social:
     username: soyoon
     url: https://github.com/soyoon
     desc: Fork me on GitHub
-    share: true
+    share: false
 
   - name: LinkedIn
     icon: linkedin
     username: Soyoon
     url: https://www.linkedin.com/in/soyoon-kim-b402a769/
     desc: Connect with me on LinkedIn
-    share: true
+    share: false
 
   # - name: Google+
   #   icon: google-plus
