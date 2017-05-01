@@ -1,3 +1,10 @@
+---
+layout: post
+title:  "Data Structure & Algorighm Study -3"
+date:   2016-04-16 22:00:00
+categories: Etc
+---
+
 # Data Structure & Algorighm Study -3
 
 ## Queue

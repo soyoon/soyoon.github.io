@@ -1,3 +1,12 @@
+---
+layout: post
+title:  "Data Structure & Algorighm Study -1"
+date:   2016-04-15 22:00:00
+author: Soyoon
+categories: Etc
+tags: Algorithm DS
+---
+
 # Data Structure & Algorighm Study -1
 
 ### 연결리스트 ( Linked Lists )

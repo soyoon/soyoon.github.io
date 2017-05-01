@@ -4,8 +4,10 @@ title: About
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](http://jekyllrb.com/)
+<img src="{{ site.baseurl }}/assets/soyoon.png" title="Profile Picture" class="profile">
 
-You can find the source code for the Jekyll new theme at: [github.com/jglovier/jekyll-new](https://github.com/jglovier/jekyll-new)
+서비스 개발, 한국어 음성인식 (korean ASR) 등 이것저것 관심이 많은 개발자입니다.
 
-You can find the source code for Jekyll at [github.com/jekyll/jekyll](https://github.com/jekyll/jekyll)
+공부 겸 차근차근 정리해보려 블로그를 시작합니다.
+
+[Soyoon's GitHub repository](https://github.com/soyoon).
