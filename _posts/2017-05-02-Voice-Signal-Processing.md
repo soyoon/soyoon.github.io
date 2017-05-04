@@ -102,3 +102,7 @@ DFT 복잡도를 계산할때 Si(k) 를 얻습니다. i 는 타임 도메인 프
 
 
 2. 프레임의 Discrete Fourier Transform 을 얻기위해 아래의 공식을 적용한다:
+
+html header: <script type="text/javascript"  src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+\\s_{ i }(k)=\sum _{ n=1 }^{ N }{ { s }_{ i }(n)h(n){ e }^{ -j2\pi kn/N } }
